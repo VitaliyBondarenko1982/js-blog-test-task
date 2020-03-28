@@ -1,3 +1,32 @@
 .pagination {
-  width: 100px;
+  width: 300px;
+  display: flex;
+  list-style: none;
+  margin: auto;
+
+  &__item {
+    width: 32px;
+    text-align: center;
+    line-height: 32px;
+    font-size: 14px;
+    background-color: inherit;
+    color: #4a4a4a;
+    transition: background-color 400ms ease;
+    cursor: pointer;
+    margin-right: 10px;
+    border: 1px solid #007e7e;
+    border-radius: 3px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &--active {
+      background-color: #007e7e;
+    }
+
+    &:hover {
+      background-color: #39e0e0;
+    }
+  }
 }
