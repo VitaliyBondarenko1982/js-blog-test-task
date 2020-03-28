@@ -1,0 +1,195 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+body,
+ul,
+li,
+p,
+h2 {
+  padding: 0;
+  margin: 0; }
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #f2f2f2; }
+
+.title {
+  text-align: center; }
+
+.news {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  list-style: none;
+  width: 954px;
+  margin: auto; }
+  .news__item {
+    width: 302px;
+    margin-bottom: 65px; }
+  .news__image {
+    width: 302px;
+    height: 176px;
+    margin-bottom: 20px; }
+  .news__section-name {
+    display: inline-block;
+    border-radius: 2px;
+    font-weight: bold;
+    font-size: 10px;
+    line-height: 24px;
+    padding: 0 23px;
+    color: #fff;
+    background-color: #035858;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px; }
+  .news__link {
+    display: block;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 24px;
+    color: #4a4a4a; }
+  .news__text {
+    color: #4a4a4a;
+    font-size: 10px;
+    line-height: 22px;
+    margin-bottom: 20px; }
+  .news__author {
+    font-size: 10px;
+    line-height: 10px;
+    color: #007e7e; }
+
+@media (max-width: 954px) {
+  .news {
+    width: 648px;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+    .news__item:nth-child(odd) {
+      margin-right: 24px; }
+    .news__item:last-child {
+      margin-right: auto; } }
+
+@media (max-width: 648px) {
+  .news {
+    width: 320px; }
+    .news__item {
+      margin: auto;
+      margin-bottom: 65px; }
+    .news__item:nth-child(odd) {
+      margin-right: 0; }
+    .news__item:last-child {
+      margin-right: 0; } }
+
+.pagination {
+  width: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  margin: auto;
+  margin-bottom: 50px; }
+  .pagination__item {
+    width: 32px;
+    text-align: center;
+    line-height: 32px;
+    font-size: 14px;
+    background-color: inherit;
+    color: #4a4a4a;
+    -webkit-transition: background-color 400ms ease;
+    transition: background-color 400ms ease;
+    cursor: pointer;
+    margin-right: 10px;
+    border: 1px solid #007e7e;
+    border-radius: 3px; }
+    .pagination__item:last-child {
+      margin-right: 0; }
+    .pagination__item--active {
+      background-color: #007e7e; }
+    .pagination__item:hover {
+      background-color: #39e0e0; }
+
+.article__content {
+  width: 952px;
+  margin: auto; }
+
+.article__image {
+  display: block;
+  width: 100%;
+  margin: auto;
+  margin-bottom: 40px;
+  height: 400px;
+  -o-object-fit: cover;
+     object-fit: cover; }
+
+.article__section {
+  display: inline-block;
+  border-radius: 2px;
+  font-weight: bold;
+  font-size: 10px;
+  line-height: 24px;
+  padding: 0 23px;
+  color: #fff;
+  background-color: #035858;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 17px; }
+
+.article__title {
+  padding: 0 50px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 32px;
+  color: #1f1f1f;
+  margin-bottom: 20px; }
+
+.article__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 50px;
+  margin-bottom: 38px; }
+
+.article__author {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 700; }
+
+.article__date {
+  font-size: 14px;
+  line-height: 24px; }
+
+.article__body {
+  font-size: 14px;
+  line-height: 36px;
+  color: #1f1f1f;
+  padding: 0 50px; }
+
+@media (max-width: 768px) {
+  .article {
+    width: 708px; }
+    .article__title, .article__wrapper, .article__body {
+      padding: 0 30px; } }
+
+@media (max-width: 320px) {
+  .article {
+    width: 320px; }
+    .article__title {
+      font-size: 18px;
+      padding: 0 20px; }
+    .article__wrapper {
+      padding: 0 20px; }
+    .article__body {
+      padding: 0 20px; } }
+
+/*# sourceMappingURL=main.css.map */

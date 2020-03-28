@@ -1,0 +1,17 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+body,
+ul,
+li,
+p,
+h2 {
+  padding: 0;
+  margin: 0; }
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: #f2f2f2; }
+
+/*# sourceMappingURL=reset.css.map */
