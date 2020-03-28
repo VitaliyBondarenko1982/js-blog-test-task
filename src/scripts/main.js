@@ -1,564 +1,25 @@
-/* eslint-disable max-len */
-/* eslint-disable semi */
+
 'use strict';
 
-const news = [
-  {
-    id: 'us-news/2020/mar/27/california-coronavirus-mercy-hospital-ship-us-navy',
-    type: 'article',
-    sectionId: 'world',
-    sectionName: 'World news',
-    webPublicationDate: '2020-01-06T12:23:12Z',
-    webTitle: 'Iranian ambassador hits out at ‘provocative’ Times article',
-    webUrl: 'https://www.theguardian.com/world/2020/jan/06/iranian-ambassador-hits-out-provocative-times-article-uk',
-    apiUrl: 'https://content.guardianapis.com/world/2020/jan/06/iranian-ambassador-hits-out-provocative-times-article-uk',
-    fields: {
-      headline: 'Hospital ship arrives in LA as California braces for crisis on par with New York',
-      trailText: 'Navy supertanker offers 1,000 beds but mayor warns doctors will have to make ‘excruciating decisions’ amid coronavirus',
-      byline: 'Mario Koran in Oakland',
-      publication: 'theguardian.com',
-      thumbnail: 'https://media.guim.co.uk/ed6ecdff342bff729870b15e1b96a047a8018e64/0_360_6051_3631/500.jpg',
-    },
-    isHosted: false,
-    pillarId: 'pillar/news',
-    pillarName: 'News',
-  },
-  {
-    id: 'us-news/2020/mar/27/california-coronavirus-mercy-hospital-ship-us-navy',
-    type: 'article',
-    sectionId: 'world',
-    sectionName: 'World news',
-    webPublicationDate: '2020-01-06T12:23:12Z',
-    webTitle: 'Iranian ambassador hits out at ‘provocative’ Times article',
-    webUrl: 'https://www.theguardian.com/world/2020/jan/06/iranian-ambassador-hits-out-provocative-times-article-uk',
-    apiUrl: 'https://content.guardianapis.com/world/2020/jan/06/iranian-ambassador-hits-out-provocative-times-article-uk',
-    fields: {
-      headline: 'Hospital ship arrives in LA as California braces for crisis on par with New York',
-      trailText: 'Navy supertanker offers 1,000 beds but mayor warns doctors will have to make ‘excruciating decisions’ amid coronavirus',
-      byline: 'Mario Koran in Oakland',
-      publication: 'theguardian.com',
-      thumbnail: 'https://media.guim.co.uk/ed6ecdff342bff729870b15e1b96a047a8018e64/0_360_6051_3631/500.jpg',
-    },
-    isHosted: false,
-    pillarId: 'pillar/news',
-    pillarName: 'News',
-  },
-  {
-    id: 'us-news/2020/mar/27/california-coronavirus-mercy-hospital-ship-us-navy',
-    type: 'article',
-    sectionId: 'world',
-    sectionName: 'World news',
-    webPublicationDate: '2020-01-06T12:23:12Z',
-    webTitle: 'Iranian ambassador hits out at ‘provocative’ Times article',
-    webUrl: 'https://www.theguardian.com/world/2020/jan/06/iranian-ambassador-hits-out-provocative-times-article-uk',
-    apiUrl: 'https://content.guardianapis.com/world/2020/jan/06/iranian-ambassador-hits-out-provocative-times-article-uk',
-    fields: {
-      headline: 'Hospital ship arrives in LA as California braces for crisis on par with New York',
-      trailText: 'Navy supertanker offers 1,000 beds but mayor warns doctors will have to make ‘excruciating decisions’ amid coronavirus',
-      byline: 'Mario Koran in Oakland',
-      publication: 'theguardian.com',
-      thumbnail: 'https://media.guim.co.uk/ed6ecdff342bff729870b15e1b96a047a8018e64/0_360_6051_3631/500.jpg',
-    },
-    isHosted: false,
-    pillarId: 'pillar/news',
-    pillarName: 'News',
-  },
-  {
-    id: 'us-news/2020/mar/27/california-coronavirus-mercy-hospital-ship-us-navy',
-    type: 'article',
-    sectionId: 'world',
-    sectionName: 'World news',
-    webPublicationDate: '2020-01-06T12:23:12Z',
-    webTitle: 'Iranian ambassador hits out at ‘provocative’ Times article',
-    webUrl: 'https://www.theguardian.com/world/2020/jan/06/iranian-ambassador-hits-out-provocative-times-article-uk',
-    apiUrl: 'https://content.guardianapis.com/world/2020/jan/06/iranian-ambassador-hits-out-provocative-times-article-uk',
-    fields: {
-      headline: 'Hospital ship arrives in LA as California braces for crisis on par with New York',
-      trailText: 'Navy supertanker offers 1,000 beds but mayor warns doctors will have to make ‘excruciating decisions’ amid coronavirus',
-      byline: 'Mario Koran in Oakland',
-      publication: 'theguardian.com',
-      thumbnail: 'https://media.guim.co.uk/ed6ecdff342bff729870b15e1b96a047a8018e64/0_360_6051_3631/500.jpg',
-    },
-    isHosted: false,
-    pillarId: 'pillar/news',
-    pillarName: 'News',
-  },
-  {
-    id: 'us-news/2020/mar/27/california-coronavirus-mercy-hospital-ship-us-navy',
-    type: 'article',
-    sectionId: 'world',
-    sectionName: 'World news',
-    webPublicationDate: '2020-01-06T12:23:12Z',
-    webTitle: 'Iranian ambassador hits out at ‘provocative’ Times article',
-    webUrl: 'https://www.theguardian.com/world/2020/jan/06/iranian-ambassador-hits-out-provocative-times-article-uk',
-    apiUrl: 'https://content.guardianapis.com/world/2020/jan/06/iranian-ambassador-hits-out-provocative-times-article-uk',
-    fields: {
-      headline: 'Hospital ship arrives in LA as California braces for crisis on par with New York',
-      trailText: 'Navy supertanker offers 1,000 beds but mayor warns doctors will have to make ‘excruciating decisions’ amid coronavirus',
-      byline: 'Mario Koran in Oakland',
-      publication: 'theguardian.com',
-      thumbnail: 'https://media.guim.co.uk/ed6ecdff342bff729870b15e1b96a047a8018e64/0_360_6051_3631/500.jpg',
-    },
-    isHosted: false,
-    pillarId: 'pillar/news',
-    pillarName: 'News',
-  },
-  {
-    id: 'us-news/2020/mar/27/california-coronavirus-mercy-hospital-ship-us-navy',
-    type: 'article',
-    sectionId: 'world',
-    sectionName: 'World news',
-    webPublicationDate: '2020-01-06T12:23:12Z',
-    webTitle: 'Iranian ambassador hits out at ‘provocative’ Times article',
-    webUrl: 'https://www.theguardian.com/world/2020/jan/06/iranian-ambassador-hits-out-provocative-times-article-uk',
-    apiUrl: 'https://content.guardianapis.com/world/2020/jan/06/iranian-ambassador-hits-out-provocative-times-article-uk',
-    fields: {
-      headline: 'Hospital ship arrives in LA as California braces for crisis on par with New York',
-      trailText: 'Navy supertanker offers 1,000 beds but mayor warns doctors will have to make ‘excruciating decisions’ amid coronavirus',
-      byline: 'Mario Koran in Oakland',
-      publication: 'theguardian.com',
-      thumbnail: 'https://media.guim.co.uk/ed6ecdff342bff729870b15e1b96a047a8018e64/0_360_6051_3631/500.jpg',
-    },
-    isHosted: false,
-    pillarId: 'pillar/news',
-    pillarName: 'News',
-  },
-  {
-    id: 'us-news/2020/mar/27/california-coronavirus-mercy-hospital-ship-us-navy',
-    type: 'article',
-    sectionId: 'world',
-    sectionName: 'World news',
-    webPublicationDate: '2020-01-06T12:23:12Z',
-    webTitle: 'Iranian ambassador hits out at ‘provocative’ Times article',
-    webUrl: 'https://www.theguardian.com/world/2020/jan/06/iranian-ambassador-hits-out-provocative-times-article-uk',
-    apiUrl: 'https://content.guardianapis.com/world/2020/jan/06/iranian-ambassador-hits-out-provocative-times-article-uk',
-    fields: {
-      headline: 'Hospital ship arrives in LA as California braces for crisis on par with New York',
-      trailText: 'Navy supertanker offers 1,000 beds but mayor warns doctors will have to make ‘excruciating decisions’ amid coronavirus',
-      byline: 'Mario Koran in Oakland',
-      publication: 'theguardian.com',
-      thumbnail: 'https://media.guim.co.uk/ed6ecdff342bff729870b15e1b96a047a8018e64/0_360_6051_3631/500.jpg',
-    },
-    isHosted: false,
-    pillarId: 'pillar/news',
-    pillarName: 'News',
-  },
-  {
-    id: 'us-news/2020/mar/27/california-coronavirus-mercy-hospital-ship-us-navy',
-    type: 'article',
-    sectionId: 'world',
-    sectionName: 'World news',
-    webPublicationDate: '2020-01-06T12:23:12Z',
-    webTitle: 'Iranian ambassador hits out at ‘provocative’ Times article',
-    webUrl: 'https://www.theguardian.com/world/2020/jan/06/iranian-ambassador-hits-out-provocative-times-article-uk',
-    apiUrl: 'https://content.guardianapis.com/world/2020/jan/06/iranian-ambassador-hits-out-provocative-times-article-uk',
-    fields: {
-      headline: 'Hospital ship arrives in LA as California braces for crisis on par with New York',
-      trailText: 'Navy supertanker offers 1,000 beds but mayor warns doctors will have to make ‘excruciating decisions’ amid coronavirus',
-      byline: 'Mario Koran in Oakland',
-      publication: 'theguardian.com',
-      thumbnail: 'https://media.guim.co.uk/ed6ecdff342bff729870b15e1b96a047a8018e64/0_360_6051_3631/500.jpg',
-    },
-    isHosted: false,
-    pillarId: 'pillar/news',
-    pillarName: 'News',
-  },
-  {
-    id: 'us-news/2020/mar/27/california-coronavirus-mercy-hospital-ship-us-navy',
-    type: 'article',
-    sectionId: 'world',
-    sectionName: 'World news',
-    webPublicationDate: '2020-01-06T12:23:12Z',
-    webTitle: 'Iranian ambassador hits out at ‘provocative’ Times article',
-    webUrl: 'https://www.theguardian.com/world/2020/jan/06/iranian-ambassador-hits-out-provocative-times-article-uk',
-    apiUrl: 'https://content.guardianapis.com/world/2020/jan/06/iranian-ambassador-hits-out-provocative-times-article-uk',
-    fields: {
-      headline: 'Hospital ship arrives in LA as California braces for crisis on par with New York',
-      trailText: 'Navy supertanker offers 1,000 beds but mayor warns doctors will have to make ‘excruciating decisions’ amid coronavirus',
-      byline: 'Mario Koran in Oakland',
-      publication: 'theguardian.com',
-      thumbnail: 'https://media.guim.co.uk/ed6ecdff342bff729870b15e1b96a047a8018e64/0_360_6051_3631/500.jpg',
-    },
-    isHosted: false,
-    pillarId: 'pillar/news',
-    pillarName: 'News',
-  },
-  {
-    id: 'us-news/2020/mar/27/california-coronavirus-mercy-hospital-ship-us-navy',
-    type: 'article',
-    sectionId: 'world',
-    sectionName: 'World news',
-    webPublicationDate: '2020-01-06T12:23:12Z',
-    webTitle: 'Iranian ambassador hits out at ‘provocative’ Times article',
-    webUrl: 'https://www.theguardian.com/world/2020/jan/06/iranian-ambassador-hits-out-provocative-times-article-uk',
-    apiUrl: 'https://content.guardianapis.com/world/2020/jan/06/iranian-ambassador-hits-out-provocative-times-article-uk',
-    fields: {
-      headline: 'Hospital ship arrives in LA as California braces for crisis on par with New York',
-      trailText: 'Navy supertanker offers 1,000 beds but mayor warns doctors will have to make ‘excruciating decisions’ amid coronavirus',
-      byline: 'Mario Koran in Oakland',
-      publication: 'theguardian.com',
-      thumbnail: 'https://media.guim.co.uk/ed6ecdff342bff729870b15e1b96a047a8018e64/0_360_6051_3631/500.jpg',
-    },
-    isHosted: false,
-    pillarId: 'pillar/news',
-    pillarName: 'News',
-  },
-  {
-    id: 'us-news/2020/mar/27/california-coronavirus-mercy-hospital-ship-us-navy',
-    type: 'article',
-    sectionId: 'world',
-    sectionName: 'World news',
-    webPublicationDate: '2020-01-06T12:23:12Z',
-    webTitle: 'Iranian ambassador hits out at ‘provocative’ Times article',
-    webUrl: 'https://www.theguardian.com/world/2020/jan/06/iranian-ambassador-hits-out-provocative-times-article-uk',
-    apiUrl: 'https://content.guardianapis.com/world/2020/jan/06/iranian-ambassador-hits-out-provocative-times-article-uk',
-    fields: {
-      headline: 'Hospital ship arrives in LA as California braces for crisis on par with New York',
-      trailText: 'Navy supertanker offers 1,000 beds but mayor warns doctors will have to make ‘excruciating decisions’ amid coronavirus',
-      byline: 'Mario Koran in Oakland',
-      publication: 'theguardian.com',
-      thumbnail: 'https://media.guim.co.uk/ed6ecdff342bff729870b15e1b96a047a8018e64/0_360_6051_3631/500.jpg',
-    },
-    isHosted: false,
-    pillarId: 'pillar/news',
-    pillarName: 'News',
-  },
-  {
-    id: 'us-news/2020/mar/27/california-coronavirus-mercy-hospital-ship-us-navy',
-    type: 'article',
-    sectionId: 'world',
-    sectionName: 'World news',
-    webPublicationDate: '2020-01-06T12:23:12Z',
-    webTitle: 'Iranian ambassador hits out at ‘provocative’ Times article',
-    webUrl: 'https://www.theguardian.com/world/2020/jan/06/iranian-ambassador-hits-out-provocative-times-article-uk',
-    apiUrl: 'https://content.guardianapis.com/world/2020/jan/06/iranian-ambassador-hits-out-provocative-times-article-uk',
-    fields: {
-      headline: 'Hospital ship arrives in LA as California braces for crisis on par with New York',
-      trailText: 'Navy supertanker offers 1,000 beds but mayor warns doctors will have to make ‘excruciating decisions’ amid coronavirus',
-      byline: 'Mario Koran in Oakland',
-      publication: 'theguardian.com',
-      thumbnail: 'https://media.guim.co.uk/ed6ecdff342bff729870b15e1b96a047a8018e64/0_360_6051_3631/500.jpg',
-    },
-    isHosted: false,
-    pillarId: 'pillar/news',
-    pillarName: 'News',
-  },
-  {
-    id: 'us-news/2020/mar/27/california-coronavirus-mercy-hospital-ship-us-navy',
-    type: 'article',
-    sectionId: 'world',
-    sectionName: 'World news',
-    webPublicationDate: '2020-01-06T12:23:12Z',
-    webTitle: 'Iranian ambassador hits out at ‘provocative’ Times article',
-    webUrl: 'https://www.theguardian.com/world/2020/jan/06/iranian-ambassador-hits-out-provocative-times-article-uk',
-    apiUrl: 'https://content.guardianapis.com/world/2020/jan/06/iranian-ambassador-hits-out-provocative-times-article-uk',
-    fields: {
-      headline: 'Hospital ship arrives in LA as California braces for crisis on par with New York',
-      trailText: 'Navy supertanker offers 1,000 beds but mayor warns doctors will have to make ‘excruciating decisions’ amid coronavirus',
-      byline: 'Mario Koran in Oakland',
-      publication: 'theguardian.com',
-      thumbnail: 'https://media.guim.co.uk/ed6ecdff342bff729870b15e1b96a047a8018e64/0_360_6051_3631/500.jpg',
-    },
-    isHosted: false,
-    pillarId: 'pillar/news',
-    pillarName: 'News',
-  },
-  {
-    id: 'us-news/2020/mar/27/california-coronavirus-mercy-hospital-ship-us-navy',
-    type: 'article',
-    sectionId: 'world',
-    sectionName: 'World news',
-    webPublicationDate: '2020-01-06T12:23:12Z',
-    webTitle: 'Iranian ambassador hits out at ‘provocative’ Times article',
-    webUrl: 'https://www.theguardian.com/world/2020/jan/06/iranian-ambassador-hits-out-provocative-times-article-uk',
-    apiUrl: 'https://content.guardianapis.com/world/2020/jan/06/iranian-ambassador-hits-out-provocative-times-article-uk',
-    fields: {
-      headline: 'Hospital ship arrives in LA as California braces for crisis on par with New York',
-      trailText: 'Navy supertanker offers 1,000 beds but mayor warns doctors will have to make ‘excruciating decisions’ amid coronavirus',
-      byline: 'Mario Koran in Oakland',
-      publication: 'theguardian.com',
-      thumbnail: 'https://media.guim.co.uk/ed6ecdff342bff729870b15e1b96a047a8018e64/0_360_6051_3631/500.jpg',
-    },
-    isHosted: false,
-    pillarId: 'pillar/news',
-    pillarName: 'News',
-  },
-  {
-    id: 'us-news/2020/mar/27/california-coronavirus-mercy-hospital-ship-us-navy',
-    type: 'article',
-    sectionId: 'world',
-    sectionName: 'World news',
-    webPublicationDate: '2020-01-06T12:23:12Z',
-    webTitle: 'Iranian ambassador hits out at ‘provocative’ Times article',
-    webUrl: 'https://www.theguardian.com/world/2020/jan/06/iranian-ambassador-hits-out-provocative-times-article-uk',
-    apiUrl: 'https://content.guardianapis.com/world/2020/jan/06/iranian-ambassador-hits-out-provocative-times-article-uk',
-    fields: {
-      headline: 'Hospital ship arrives in LA as California braces for crisis on par with New York',
-      trailText: 'Navy supertanker offers 1,000 beds but mayor warns doctors will have to make ‘excruciating decisions’ amid coronavirus',
-      byline: 'Mario Koran in Oakland',
-      publication: 'theguardian.com',
-      thumbnail: 'https://media.guim.co.uk/ed6ecdff342bff729870b15e1b96a047a8018e64/0_360_6051_3631/500.jpg',
-    },
-    isHosted: false,
-    pillarId: 'pillar/news',
-    pillarName: 'News',
-  },
-  {
-    id: 'us-news/2020/mar/27/california-coronavirus-mercy-hospital-ship-us-navy',
-    type: 'article',
-    sectionId: 'world',
-    sectionName: 'World news',
-    webPublicationDate: '2020-01-06T12:23:12Z',
-    webTitle: 'Iranian ambassador hits out at ‘provocative’ Times article',
-    webUrl: 'https://www.theguardian.com/world/2020/jan/06/iranian-ambassador-hits-out-provocative-times-article-uk',
-    apiUrl: 'https://content.guardianapis.com/world/2020/jan/06/iranian-ambassador-hits-out-provocative-times-article-uk',
-    fields: {
-      headline: 'Hospital ship arrives in LA as California braces for crisis on par with New York',
-      trailText: 'Navy supertanker offers 1,000 beds but mayor warns doctors will have to make ‘excruciating decisions’ amid coronavirus',
-      byline: 'Mario Koran in Oakland',
-      publication: 'theguardian.com',
-      thumbnail: 'https://media.guim.co.uk/ed6ecdff342bff729870b15e1b96a047a8018e64/0_360_6051_3631/500.jpg',
-    },
-    isHosted: false,
-    pillarId: 'pillar/news',
-    pillarName: 'News',
-  },
-  {
-    id: 'us-news/2020/mar/27/california-coronavirus-mercy-hospital-ship-us-navy',
-    type: 'article',
-    sectionId: 'world',
-    sectionName: 'World news',
-    webPublicationDate: '2020-01-06T12:23:12Z',
-    webTitle: 'Iranian ambassador hits out at ‘provocative’ Times article',
-    webUrl: 'https://www.theguardian.com/world/2020/jan/06/iranian-ambassador-hits-out-provocative-times-article-uk',
-    apiUrl: 'https://content.guardianapis.com/world/2020/jan/06/iranian-ambassador-hits-out-provocative-times-article-uk',
-    fields: {
-      headline: 'Hospital ship arrives in LA as California braces for crisis on par with New York',
-      trailText: 'Navy supertanker offers 1,000 beds but mayor warns doctors will have to make ‘excruciating decisions’ amid coronavirus',
-      byline: 'Mario Koran in Oakland',
-      publication: 'theguardian.com',
-      thumbnail: 'https://media.guim.co.uk/ed6ecdff342bff729870b15e1b96a047a8018e64/0_360_6051_3631/500.jpg',
-    },
-    isHosted: false,
-    pillarId: 'pillar/news',
-    pillarName: 'News',
-  },
-  {
-    id: 'us-news/2020/mar/27/california-coronavirus-mercy-hospital-ship-us-navy',
-    type: 'article',
-    sectionId: 'world',
-    sectionName: 'World news',
-    webPublicationDate: '2020-01-06T12:23:12Z',
-    webTitle: 'Iranian ambassador hits out at ‘provocative’ Times article',
-    webUrl: 'https://www.theguardian.com/world/2020/jan/06/iranian-ambassador-hits-out-provocative-times-article-uk',
-    apiUrl: 'https://content.guardianapis.com/world/2020/jan/06/iranian-ambassador-hits-out-provocative-times-article-uk',
-    fields: {
-      headline: 'Hospital ship arrives in LA as California braces for crisis on par with New York',
-      trailText: 'Navy supertanker offers 1,000 beds but mayor warns doctors will have to make ‘excruciating decisions’ amid coronavirus',
-      byline: 'Mario Koran in Oakland',
-      publication: 'theguardian.com',
-      thumbnail: 'https://media.guim.co.uk/ed6ecdff342bff729870b15e1b96a047a8018e64/0_360_6051_3631/500.jpg',
-    },
-    isHosted: false,
-    pillarId: 'pillar/news',
-    pillarName: 'News',
-  },
-  {
-    id: 'us-news/2020/mar/27/california-coronavirus-mercy-hospital-ship-us-navy',
-    type: 'article',
-    sectionId: 'world',
-    sectionName: 'World news',
-    webPublicationDate: '2020-01-06T12:23:12Z',
-    webTitle: 'Iranian ambassador hits out at ‘provocative’ Times article',
-    webUrl: 'https://www.theguardian.com/world/2020/jan/06/iranian-ambassador-hits-out-provocative-times-article-uk',
-    apiUrl: 'https://content.guardianapis.com/world/2020/jan/06/iranian-ambassador-hits-out-provocative-times-article-uk',
-    fields: {
-      headline: 'Hospital ship arrives in LA as California braces for crisis on par with New York',
-      trailText: 'Navy supertanker offers 1,000 beds but mayor warns doctors will have to make ‘excruciating decisions’ amid coronavirus',
-      byline: 'Mario Koran in Oakland',
-      publication: 'theguardian.com',
-      thumbnail: 'https://media.guim.co.uk/ed6ecdff342bff729870b15e1b96a047a8018e64/0_360_6051_3631/500.jpg',
-    },
-    isHosted: false,
-    pillarId: 'pillar/news',
-    pillarName: 'News',
-  },
-  {
-    id: 'us-news/2020/mar/27/california-coronavirus-mercy-hospital-ship-us-navy',
-    type: 'article',
-    sectionId: 'world',
-    sectionName: 'World news',
-    webPublicationDate: '2020-01-06T12:23:12Z',
-    webTitle: 'Iranian ambassador hits out at ‘provocative’ Times article',
-    webUrl: 'https://www.theguardian.com/world/2020/jan/06/iranian-ambassador-hits-out-provocative-times-article-uk',
-    apiUrl: 'https://content.guardianapis.com/world/2020/jan/06/iranian-ambassador-hits-out-provocative-times-article-uk',
-    fields: {
-      headline: 'Hospital ship arrives in LA as California braces for crisis on par with New York',
-      trailText: 'Navy supertanker offers 1,000 beds but mayor warns doctors will have to make ‘excruciating decisions’ amid coronavirus',
-      byline: 'Mario Koran in Oakland',
-      publication: 'theguardian.com',
-      thumbnail: 'https://media.guim.co.uk/ed6ecdff342bff729870b15e1b96a047a8018e64/0_360_6051_3631/500.jpg',
-    },
-    isHosted: false,
-    pillarId: 'pillar/news',
-    pillarName: 'News',
-  },
-  {
-    id: 'us-news/2020/mar/27/california-coronavirus-mercy-hospital-ship-us-navy',
-    type: 'article',
-    sectionId: 'world',
-    sectionName: 'World news',
-    webPublicationDate: '2020-01-06T12:23:12Z',
-    webTitle: 'Iranian ambassador hits out at ‘provocative’ Times article',
-    webUrl: 'https://www.theguardian.com/world/2020/jan/06/iranian-ambassador-hits-out-provocative-times-article-uk',
-    apiUrl: 'https://content.guardianapis.com/world/2020/jan/06/iranian-ambassador-hits-out-provocative-times-article-uk',
-    fields: {
-      headline: 'Hospital ship arrives in LA as California braces for crisis on par with New York',
-      trailText: 'Navy supertanker offers 1,000 beds but mayor warns doctors will have to make ‘excruciating decisions’ amid coronavirus',
-      byline: 'Mario Koran in Oakland',
-      publication: 'theguardian.com',
-      thumbnail: 'https://media.guim.co.uk/ed6ecdff342bff729870b15e1b96a047a8018e64/0_360_6051_3631/500.jpg',
-    },
-    isHosted: false,
-    pillarId: 'pillar/news',
-    pillarName: 'News',
-  },
-  {
-    id: 'us-news/2020/mar/27/california-coronavirus-mercy-hospital-ship-us-navy',
-    type: 'article',
-    sectionId: 'world',
-    sectionName: 'World news',
-    webPublicationDate: '2020-01-06T12:23:12Z',
-    webTitle: 'Iranian ambassador hits out at ‘provocative’ Times article',
-    webUrl: 'https://www.theguardian.com/world/2020/jan/06/iranian-ambassador-hits-out-provocative-times-article-uk',
-    apiUrl: 'https://content.guardianapis.com/world/2020/jan/06/iranian-ambassador-hits-out-provocative-times-article-uk',
-    fields: {
-      headline: 'Hospital ship arrives in LA as California braces for crisis on par with New York',
-      trailText: 'Navy supertanker offers 1,000 beds but mayor warns doctors will have to make ‘excruciating decisions’ amid coronavirus',
-      byline: 'Mario Koran in Oakland',
-      publication: 'theguardian.com',
-      thumbnail: 'https://media.guim.co.uk/ed6ecdff342bff729870b15e1b96a047a8018e64/0_360_6051_3631/500.jpg',
-    },
-    isHosted: false,
-    pillarId: 'pillar/news',
-    pillarName: 'News',
-  },
-  {
-    id: 'us-news/2020/mar/27/california-coronavirus-mercy-hospital-ship-us-navy',
-    type: 'article',
-    sectionId: 'world',
-    sectionName: 'World news',
-    webPublicationDate: '2020-01-06T12:23:12Z',
-    webTitle: 'Iranian ambassador hits out at ‘provocative’ Times article',
-    webUrl: 'https://www.theguardian.com/world/2020/jan/06/iranian-ambassador-hits-out-provocative-times-article-uk',
-    apiUrl: 'https://content.guardianapis.com/world/2020/jan/06/iranian-ambassador-hits-out-provocative-times-article-uk',
-    fields: {
-      headline: 'Hospital ship arrives in LA as California braces for crisis on par with New York',
-      trailText: 'Navy supertanker offers 1,000 beds but mayor warns doctors will have to make ‘excruciating decisions’ amid coronavirus',
-      byline: 'Mario Koran in Oakland',
-      publication: 'theguardian.com',
-      thumbnail: 'https://media.guim.co.uk/ed6ecdff342bff729870b15e1b96a047a8018e64/0_360_6051_3631/500.jpg',
-    },
-    isHosted: false,
-    pillarId: 'pillar/news',
-    pillarName: 'News',
-  },
-  {
-    id: 'us-news/2020/mar/27/california-coronavirus-mercy-hospital-ship-us-navy',
-    type: 'article',
-    sectionId: 'world',
-    sectionName: 'World news',
-    webPublicationDate: '2020-01-06T12:23:12Z',
-    webTitle: 'Iranian ambassador hits out at ‘provocative’ Times article',
-    webUrl: 'https://www.theguardian.com/world/2020/jan/06/iranian-ambassador-hits-out-provocative-times-article-uk',
-    apiUrl: 'https://content.guardianapis.com/world/2020/jan/06/iranian-ambassador-hits-out-provocative-times-article-uk',
-    fields: {
-      headline: 'Hospital ship arrives in LA as California braces for crisis on par with New York',
-      trailText: 'Navy supertanker offers 1,000 beds but mayor warns doctors will have to make ‘excruciating decisions’ amid coronavirus',
-      byline: 'Mario Koran in Oakland',
-      publication: 'theguardian.com',
-      thumbnail: 'https://media.guim.co.uk/ed6ecdff342bff729870b15e1b96a047a8018e64/0_360_6051_3631/500.jpg',
-    },
-    isHosted: false,
-    pillarId: 'pillar/news',
-    pillarName: 'News',
-  },
-  {
-    id: 'us-news/2020/mar/27/california-coronavirus-mercy-hospital-ship-us-navy',
-    type: 'article',
-    sectionId: 'world',
-    sectionName: 'World news',
-    webPublicationDate: '2020-01-06T12:23:12Z',
-    webTitle: 'Iranian ambassador hits out at ‘provocative’ Times article',
-    webUrl: 'https://www.theguardian.com/world/2020/jan/06/iranian-ambassador-hits-out-provocative-times-article-uk',
-    apiUrl: 'https://content.guardianapis.com/world/2020/jan/06/iranian-ambassador-hits-out-provocative-times-article-uk',
-    fields: {
-      headline: 'Hospital ship arrives in LA as California braces for crisis on par with New York',
-      trailText: 'Navy supertanker offers 1,000 beds but mayor warns doctors will have to make ‘excruciating decisions’ amid coronavirus',
-      byline: 'Mario Koran in Oakland',
-      publication: 'theguardian.com',
-      thumbnail: 'https://media.guim.co.uk/ed6ecdff342bff729870b15e1b96a047a8018e64/0_360_6051_3631/500.jpg',
-    },
-    isHosted: false,
-    pillarId: 'pillar/news',
-    pillarName: 'News',
-  },
-  {
-    id: 'us-news/2020/mar/27/california-coronavirus-mercy-hospital-ship-us-navy',
-    type: 'article',
-    sectionId: 'world',
-    sectionName: 'World news',
-    webPublicationDate: '2020-01-06T12:23:12Z',
-    webTitle: 'Iranian ambassador hits out at ‘provocative’ Times article',
-    webUrl: 'https://www.theguardian.com/world/2020/jan/06/iranian-ambassador-hits-out-provocative-times-article-uk',
-    apiUrl: 'https://content.guardianapis.com/world/2020/jan/06/iranian-ambassador-hits-out-provocative-times-article-uk',
-    fields: {
-      headline: 'Hospital ship arrives in LA as California braces for crisis on par with New York',
-      trailText: 'Navy supertanker offers 1,000 beds but mayor warns doctors will have to make ‘excruciating decisions’ amid coronavirus',
-      byline: 'Mario Koran in Oakland',
-      publication: 'theguardian.com',
-      thumbnail: 'https://media.guim.co.uk/ed6ecdff342bff729870b15e1b96a047a8018e64/0_360_6051_3631/500.jpg',
-    },
-    isHosted: false,
-    pillarId: 'pillar/news',
-    pillarName: 'News',
-  },
-  {
-    id: 'us-news/2020/mar/27/california-coronavirus-mercy-hospital-ship-us-navy',
-    type: 'article',
-    sectionId: 'world',
-    sectionName: 'World news',
-    webPublicationDate: '2020-01-06T12:23:12Z',
-    webTitle: 'Iranian ambassador hits out at ‘provocative’ Times article',
-    webUrl: 'https://www.theguardian.com/world/2020/jan/06/iranian-ambassador-hits-out-provocative-times-article-uk',
-    apiUrl: 'https://content.guardianapis.com/world/2020/jan/06/iranian-ambassador-hits-out-provocative-times-article-uk',
-    fields: {
-      headline: 'Hospital ship arrives in LA as California braces for crisis on par with New York',
-      trailText: 'Navy supertanker offers 1,000 beds but mayor warns doctors will have to make ‘excruciating decisions’ amid coronavirus',
-      byline: 'Mario Koran in Oakland',
-      publication: 'theguardian.com',
-      thumbnail: 'https://media.guim.co.uk/ed6ecdff342bff729870b15e1b96a047a8018e64/0_360_6051_3631/500.jpg',
-    },
-    isHosted: false,
-    pillarId: 'pillar/news',
-    pillarName: 'News',
-  },
-]
+/* eslint-disable max-len */
+const NEWS_URL = `http://content.guardianapis.com/search?from-date=2020-03-27&to-date=2020-03-28&order-by=newest&show-fields=all&page-size=90&api-key=b41e2e26-a0d2-488d-8155-855ade5f1227`;
 
-// const getNews = (page) => {
-//   const news = fetch(`http://content.guardianapis.com/search?from-date=2020-03-26&to-date=2020-03-27&order-by=newest&show-fields=all&page-size=10&api-key=b41e2e26-a0d2-488d-8155-855ade5f1227`)
-//     .then(response => response.json());
+const getNews = () => {
+  const news = fetch(NEWS_URL)
+    .then(response => response.json());
 
-//   return news;
-// };
+  return news;
+};
 
-const showGoods = async() => {
-  // const result = await getNews();
-  // const news = result.response.results;
-  // console.log(news);
+const newsList = document.querySelector('#news');
+const pagination = document.querySelector('#pagination');
+const mainTitle = document.querySelector('.title');
+const articlePage = document.querySelector('#article');
 
-  const newsList = document.querySelector('#news');
-  const pagination = document.querySelector('#pagination');
+const showNews = async() => {
+  const result = await getNews();
+  const news = result.response.results;
+
   const notesOnPage = 9;
   const countOfItems = Math.ceil(news.length / notesOnPage);
 
@@ -583,6 +44,7 @@ const showGoods = async() => {
 
       for (const article of articles) {
         const newsItem = document.createElement('li');
+        const fullNewsLink = document.createElement('a');
         const image = document.createElement('img');
         const sectionName = document.createElement('span');
         const title = document.createElement('a');
@@ -590,7 +52,8 @@ const showGoods = async() => {
         const author = document.createElement('p');
 
         createBox(newsItem, 'news__item', newsList);
-        createBox(image, 'news__image', newsItem);
+        createBox(fullNewsLink, 'news__link-article', newsItem);
+        createBox(image, 'news__image', fullNewsLink);
         createBox(sectionName, 'news__section-name', newsItem);
         createBox(title, 'news__link', newsItem);
         createBox(text, 'news__text', newsItem);
@@ -600,8 +63,10 @@ const showGoods = async() => {
         text.innerHTML = article.fields.trailText;
         title.innerHTML = article.fields.headline;
         author.innerHTML = article.fields.byline;
+        fullNewsLink.setAttribute('href', '/article.html');
+        image.setAttribute('alt', article.apiUrl);
         title.setAttribute('href', article.webUrl);
-        image.setAttribute('src', article.fields.thumbnail)
+        image.setAttribute('src', article.fields.thumbnail);
       }
     };
   }());
@@ -609,6 +74,10 @@ const showGoods = async() => {
   const paginationItems = [];
 
   for (let i = 1; i <= countOfItems; i++) {
+    if (!pagination) {
+      return;
+    };
+
     const li = document.createElement('li');
 
     li.classList.add('pagination__item');
@@ -625,10 +94,53 @@ const showGoods = async() => {
     });
   }
 
-  function createBox(newElement, className, parentElement) {
-    newElement.classList.add(className);
-    parentElement.appendChild(newElement);
-  }
+  newsList.addEventListener('click', function(evt) {
+    evt.preventDefault();
+
+    history.pushState({ index: 'article' }, 'Title', '/article.html');
+
+    const { alt } = evt.target;
+
+    newsList.innerHTML = '';
+    pagination.innerHTML = '';
+    mainTitle.innerHTML = '';
+
+    const article = news.find(item => item.apiUrl === alt);
+
+    const articleContent = document.createElement('div');
+    const articleImage = document.createElement('img');
+    const articleSection = document.createElement('span');
+    const articleTitle = document.createElement('h2');
+    const articleWrapper = document.createElement('div');
+    const articleAuthor = document.createElement('p');
+    const articleDate = document.createElement('p');
+    const articleBody = document.createElement('p');
+
+    createBox(articleContent, 'article__content', articlePage);
+    createBox(articleImage, 'article__image', articleContent);
+    createBox(articleSection, 'article__section', articleContent);
+    createBox(articleTitle, 'article__title', articleContent);
+    createBox(articleWrapper, 'article__wrapper', articleContent);
+    createBox(articleAuthor, 'article__author', articleWrapper);
+    createBox(articleDate, 'article__date', articleWrapper);
+    createBox(articleBody, 'article__body', articleContent);
+
+    articleImage.setAttribute('src', article.fields.thumbnail);
+    articleSection.innerHTML = article.sectionName;
+    articleTitle.innerHTML = article.fields.headline;
+    articleAuthor.innerHTML = article.fields.byline;
+    articleDate.innerHTML = article.webPublicationDate.slice(0, 10);
+    articleBody.innerHTML = article.fields.bodyText;
+  });
 };
 
-showGoods();
+function createBox(newElement, className, parentElement) {
+  if (!parentElement) {
+    return;
+  }
+
+  newElement.classList.add(className);
+  parentElement.appendChild(newElement);
+}
+
+showNews();
