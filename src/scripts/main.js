@@ -382,15 +382,101 @@ const news = [
   },
 ]
 
-// const getGoods = () => {
-//   const goods =
-// fetch(`https://content.guardianapis.com/tags?page=1&page-size=9&q=blog&api-key=b41e2e26-a0d2-488d-8155-855ade5f1227`)
+const topContent = [
+  {
+    text: 'Privacy Handbook for Startups',
+    image: 'images/top-image-19.png',
+    description: 'Vlad Nekrutenko, CIPP/E Privacy Lawyer at Legal Nodes',
+  },
+  {
+    text: 'Legal Nodes in 2019: A Year in Review',
+    image: 'images/top-image-2.png',
+    description: '',
+  },
+  {
+    text: 'STO Report',
+    image: 'images/top-image-3.png',
+    description: 'Nestor Dubnevych, Margaryta Sivakova, Co-Founders of Legal Nodes & Nik Kliapets, Legal Counsel at Legal Nodes',
+  },
+  {
+    text: 'Malta Sandbox for DLT Based Gaming',
+    image: 'images/top-image-4.png',
+    description: 'Alexia Pollacco, Lawyer at Blockchain Advisory',
+  },
+  {
+    text: 'Legal Nodes Wins 2019 Startup Competition!',
+    image: 'images/top-image-5.png',
+    description: '',
+  },
+  {
+    text: 'Swiss FINMA Releases Stablecoin Guidelines',
+    image: 'images/top-image-67.png',
+    description: 'Nik Kliapets, Legal Counsel at Legal Nodes',
+  },
+  {
+    text: 'Challenges of Space Mining Regulation',
+    image: 'images/top-image-67.png',
+    description: 'Nik Kliapets, Legal Counsel at Legal Nodes',
+  },
+  {
+    text: 'Fast Line for FinTech in Singapore',
+    image: 'images/top-image-8_m.png',
+    description: 'Sergio Mokhniev, Kristina Nikipolska, Compliance Experts at Legal Nodes',
+  },
+  {
+    text: 'Abusive by Design: Part 3. Dark Patterns v. GDPR',
+    image: 'images/top-image-19.png',
+    description: 'Vlad Nekrutenko, CIPP/E Privacy Lawyer at Legal Nodes',
+  },
+];
+
+const bottomContent = [
+  {
+    text: 'Legal Nodes is happy to present the results of our second research - Privacy Handbook.',
+    author: 'Alexia Pollacco',
+  },
+  {
+    text: 'Legal Nodes is happy to present the results of our second research - Privacy Handbook.',
+    author: 'Alexia Pollacco',
+  },
+  {
+    text: 'Legal Nodes is happy to present the results of our second research - Privacy Handbook.',
+    author: 'Alexia Pollacco',
+  },
+  {
+    text: 'Legal Nodes is happy to present the results of our second research - Privacy Handbook.',
+    author: 'Alexia Pollacco',
+  },
+  {
+    text: 'Legal Nodes is happy to present the results of our second research - Privacy Handbook.',
+    author: 'Alexia Pollacco',
+  },
+  {
+    text: 'Legal Nodes is happy to present the results of our second research - Privacy Handbook.',
+    author: 'Alexia Pollacco',
+  },
+  {
+    text: 'Legal Nodes is happy to present the results of our second research - Privacy Handbook.',
+    author: 'Alexia Pollacco',
+  },
+  {
+    text: 'Legal Nodes is happy to present the results of our second research - Privacy Handbook.',
+    author: 'Alexia Pollacco',
+  },
+  {
+    text: 'Legal Nodes is happy to present the results of our second research - Privacy Handbook.',
+    author: 'Alexia Pollacco',
+  },
+]
+
+// const getGoods = (page) => {
+//   const goods = fetch(`https://content.guardianapis.com/search?page-size=72&page=1&q=article&api-key=b41e2e26-a0d2-488d-8155-855ade5f1227`)
 //     .then(response => response.json());
 
 //   return goods;
 // };
 
-const showGoods = () => {
+const showGoods = async() => {
   // const result = await getGoods();
   // const news = result.response.results;
 
@@ -420,23 +506,46 @@ const showGoods = () => {
 
       for (const article of articles) {
         const newsItem = document.createElement('li');
-
-        newsItem.classList.add('news__item');
-        newsList.appendChild(newsItem);
-
         const newsTop = document.createElement('div');
-
-        newsTop.classList.add('news__top');
-        newsItem.appendChild(newsTop);
-
         const newsBottom = document.createElement('div');
+        const topText = document.createElement('h2');
+        const imageWrapper = document.createElement('p');
+        const topImage = document.createElement('img');
+        const topDescription = document.createElement('p');
+        const sectionName = document.createElement('span');
+        const title = document.createElement('a');
+        const text = document.createElement('p');
+        const author = document.createElement('p');
 
-        newsBottom.classList.add('news__bottom');
-        newsItem.appendChild(newsBottom);
+        createBox(newsItem, 'news__item', newsList);
+        createBox(newsTop, 'news__top', newsItem);
+        createBox(newsBottom, 'news__bottom', newsItem);
+        createBox(topText, 'news__title', newsTop);
+        createBox(imageWrapper, 'news__wrapper', newsTop);
+        createBox(topImage, 'news__image', imageWrapper);
+        createBox(topDescription, 'news__description', imageWrapper);
+        createBox(sectionName, 'news__section-name', newsBottom);
+        createBox(title, 'news__link', newsBottom);
+        createBox(text, 'news__text', newsBottom);
+        createBox(author, 'news__author', newsBottom);
 
-        createBox(article.sectionName, newsBottom);
-        createBox(article.webTitle, newsBottom);
-        createBox(article.webUrl, newsBottom);
+        sectionName.innerHTML = article.sectionName;
+        title.innerHTML = article.webTitle;
+        title.setAttribute('href', article.webUrl);
+      }
+
+      const bottomText = document.querySelectorAll('.news__text');
+      const bottomAuthor = document.querySelectorAll('.news__author');
+      const topTextArray = document.querySelectorAll('.news__title');
+      const topImageArray = document.querySelectorAll('.news__image');
+      const topDescriptionArray = document.querySelectorAll('.news__description');
+
+      for (let i = 0; i < notesOnPage; i++) {
+        bottomText[i].innerHTML = bottomContent[i].text;
+        bottomAuthor[i].innerHTML = bottomContent[i].author;
+        topTextArray[i].innerHTML = topContent[i].text;
+        topDescriptionArray[i].innerHTML = topContent[i].description;
+        topImageArray[i].setAttribute('src', topContent[i].image);
       }
     };
   }());
@@ -460,11 +569,9 @@ const showGoods = () => {
     });
   }
 
-  function createBox(text, li) {
-    const div = document.createElement('div');
-
-    div.innerHTML = text;
-    li.appendChild(div);
+  function createBox(newElement, className, parentElement) {
+    newElement.classList.add(className);
+    parentElement.appendChild(newElement);
   }
 };
 
