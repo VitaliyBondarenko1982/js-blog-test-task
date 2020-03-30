@@ -1,4 +1,3 @@
-
 'use strict';
 
 /* eslint-disable max-len */
@@ -13,8 +12,6 @@ const getNews = () => {
 
 const newsList = document.querySelector('#news');
 const pagination = document.querySelector('#pagination');
-const mainTitle = document.querySelector('.title');
-const articlePage = document.querySelector('#article');
 
 const showNews = async() => {
   const result = await getNews();
@@ -63,7 +60,7 @@ const showNews = async() => {
         text.innerHTML = article.fields.trailText;
         title.innerHTML = article.fields.headline;
         author.innerHTML = article.fields.byline;
-        fullNewsLink.setAttribute('href', '/article.html');
+        fullNewsLink.setAttribute('href', `article.html/id=${article.id}`);
         image.setAttribute('alt', article.apiUrl);
         title.setAttribute('href', article.webUrl);
         image.setAttribute('src', article.fields.thumbnail);
@@ -94,43 +91,14 @@ const showNews = async() => {
     });
   }
 
-  newsList.addEventListener('click', function(evt) {
+  newsList.addEventListener('click', async function(evt) {
     evt.preventDefault();
-
-    history.pushState({ index: 'article' }, 'Title', '/article.html');
 
     const { alt } = evt.target;
 
-    newsList.innerHTML = '';
-    pagination.innerHTML = '';
-    mainTitle.innerHTML = '';
-
     const article = news.find(item => item.apiUrl === alt);
 
-    const articleContent = document.createElement('div');
-    const articleImage = document.createElement('img');
-    const articleSection = document.createElement('span');
-    const articleTitle = document.createElement('h2');
-    const articleWrapper = document.createElement('div');
-    const articleAuthor = document.createElement('p');
-    const articleDate = document.createElement('p');
-    const articleBody = document.createElement('p');
-
-    createBox(articleContent, 'article__content', articlePage);
-    createBox(articleImage, 'article__image', articleContent);
-    createBox(articleSection, 'article__section', articleContent);
-    createBox(articleTitle, 'article__title', articleContent);
-    createBox(articleWrapper, 'article__wrapper', articleContent);
-    createBox(articleAuthor, 'article__author', articleWrapper);
-    createBox(articleDate, 'article__date', articleWrapper);
-    createBox(articleBody, 'article__body', articleContent);
-
-    articleImage.setAttribute('src', article.fields.thumbnail);
-    articleSection.innerHTML = article.sectionName;
-    articleTitle.innerHTML = article.fields.headline;
-    articleAuthor.innerHTML = article.fields.byline;
-    articleDate.innerHTML = article.webPublicationDate.slice(0, 10);
-    articleBody.innerHTML = article.fields.bodyText;
+    location.assign(`${window.location}article.html?id=${article.id}`);
   });
 };
 
