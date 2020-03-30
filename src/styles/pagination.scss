@@ -1,5 +1,5 @@
 .pagination {
-  width: 300px;
+  width: 600px;
   display: flex;
   list-style: none;
   margin: auto;
@@ -29,5 +29,11 @@
     &:hover {
       background-color: #39e0e0;
     }
+  }
+}
+
+@media (max-width: 648px) {
+  .pagination {
+    display: none;
   }
 }
