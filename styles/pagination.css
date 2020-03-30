@@ -1,5 +1,5 @@
 .pagination {
-  width: 300px;
+  width: 600px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -25,5 +25,9 @@
       background-color: #007e7e; }
     .pagination__item:hover {
       background-color: #39e0e0; }
+
+@media (max-width: 648px) {
+  .pagination {
+    display: none; } }
 
 /*# sourceMappingURL=pagination.css.map */
