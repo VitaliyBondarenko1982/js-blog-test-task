@@ -15,26 +15,29 @@
 
   &__section {
     display: inline-block;
-    border-radius: 2px;
+    margin-bottom: 17px;
+    padding: 0 23px;
+
     font-weight: bold;
     font-size: 10px;
     line-height: 24px;
-    padding: 0 23px;
     color: #fff;
-    background-color: #035858;
     text-transform: uppercase;
     letter-spacing: 1px;
-    margin-bottom: 17px;
+
+    background-color: #035858;
+    border-radius: 2px;
   }
 
   &__title {
+    margin-bottom: 20px;
     padding: 0 50px;
+
     text-align: center;
     font-weight: bold;
     font-size: 32px;
     line-height: 32px;
     color: #1f1f1f;
-    margin-bottom: 20px;
   }
 
   &__wrapper {
@@ -56,10 +59,10 @@
   }
 
   &__body {
+    padding: 0 50px;
     font-size: 14px;
     line-height: 36px;
     color: #1f1f1f;
-    padding: 0 50px;
   }
 }
 
@@ -80,8 +83,8 @@
     width: 320px;
 
     &__title {
-      font-size: 18px;
       padding: 0 20px;
+      font-size: 18px;
     }
 
     &__wrapper {
