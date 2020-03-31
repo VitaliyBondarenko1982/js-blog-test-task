@@ -1,3 +1,15 @@
+@keyframes showNewsList {
+  from {
+    transform: translateY(200px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 .title {
   text-align: center;
 }
@@ -9,6 +21,8 @@
   flex-wrap: wrap;
   width: 954px;
   list-style: none;
+
+  animation: showNewsList 900ms ease-in-out forwards;
 
   &__item {
     margin-bottom: 65px;
@@ -53,7 +67,7 @@
 
   &__text {
     margin-bottom: 20px;
-    
+
     color: #4a4a4a;
     font-size: 10px;
     line-height: 22px;
